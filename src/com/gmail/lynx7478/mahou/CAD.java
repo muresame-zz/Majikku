@@ -31,6 +31,21 @@ public class CAD
 		this.item = item;
 	}
 	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public String getCodeName()
+	{
+		return codeName;
+	}
+	
+	public ItemStack getItem()
+	{
+		return item;
+	}
+	
 	public int getLevelRequired()
 	{
 		return levelRequired;
