@@ -1,4 +1,4 @@
-package com.gmail.lynx7478.mahou.player;
+package com.gmail.lynx7478.majikku.player;
 
 import org.bukkit.entity.Player;
 

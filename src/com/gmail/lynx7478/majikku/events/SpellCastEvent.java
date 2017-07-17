@@ -1,4 +1,4 @@
-package com.gmail.lynx7478.mahou.events;
+package com.gmail.lynx7478.majikku.events;
 
 public class SpellCastEvent {
 	

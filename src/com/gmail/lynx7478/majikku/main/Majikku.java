@@ -1,4 +1,4 @@
-package com.gmail.lynx7478.mahou.main;
+package com.gmail.lynx7478.majikku.main;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

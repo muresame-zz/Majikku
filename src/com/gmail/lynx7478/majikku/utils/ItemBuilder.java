@@ -1,4 +1,4 @@
-package com.gmail.lynx7478.mahou.utils;
+package com.gmail.lynx7478.majikku.utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
