@@ -5,12 +5,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.gmail.lynx7478.mahou.CADManager;
 import com.gmail.lynx7478.mahou.SpellManager;
 
-public class Mahou extends JavaPlugin 
+public class Majikku extends JavaPlugin 
 {
 	
-	private static Mahou instance;
+	private static Majikku instance;
 	
-	public static Mahou getInstance()
+	public static Majikku getInstance()
 	{
 		return instance;
 	}
