@@ -4,7 +4,7 @@ import org.bukkit.entity.Player;
 
 import com.gmail.lynx7478.mahou.CAD;
 
-public class MahouPlayer 
+public class MajikkuPlayer 
 {
 	
 	private Player bukkitPlayer;
@@ -14,7 +14,7 @@ public class MahouPlayer
 	private double basePower;
 	private CAD[] cads;
 	
-	public MahouPlayer()
+	public MajikkuPlayer()
 	{
 		
 	}
