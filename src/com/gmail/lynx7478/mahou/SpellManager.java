@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class SpellManager 
 {
 	
-	private static ArrayList<Spell> spells = new ArrayList<Spell>();
+	private ArrayList<Spell> spells;
 	
 	public SpellManager()
 	{
-		
+		spells = new ArrayList<Spell>();
 	}
 	
-	public static ArrayList<Spell> getSpells()
+	public ArrayList<Spell> getSpells()
 	{
 		return spells;
 	}
