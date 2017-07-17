@@ -36,7 +36,7 @@ public class CAD
 		return name;
 	}
 	
-	public String getCodeName()
+	public String getCodename()
 	{
 		return codeName;
 	}
