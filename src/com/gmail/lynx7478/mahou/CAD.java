@@ -16,7 +16,7 @@ public class CAD
 	private String codeName;
 	private ItemStack item;
 	
-	public CAD(String name, String codeName, int levelRequired, int cadLevel, int level, double basePower, double powerPerLevel,
+	public CAD(String name, String codeName, int levelRequired, int cadLevel, int baseLevel, double basePower, double powerPerLevel,
 			double maxPower, ItemStack item)
 	{
 		this.levelRequired = levelRequired;
