@@ -2,8 +2,8 @@ package com.gmail.lynx7478.mahou.main;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.gmail.lynx7478.mahou.CADManager;
-import com.gmail.lynx7478.mahou.SpellManager;
+import com.gmail.lynx7478.majikku.CADManager;
+import com.gmail.lynx7478.majikku.SpellManager;
 
 public class Majikku extends JavaPlugin 
 {

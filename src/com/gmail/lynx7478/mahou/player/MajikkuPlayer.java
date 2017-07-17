@@ -2,7 +2,7 @@ package com.gmail.lynx7478.mahou.player;
 
 import org.bukkit.entity.Player;
 
-import com.gmail.lynx7478.mahou.CAD;
+import com.gmail.lynx7478.majikku.CAD;
 
 public class MajikkuPlayer 
 {
