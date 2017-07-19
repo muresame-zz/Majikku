@@ -12,6 +12,7 @@ import com.gmail.lynx7478.majikku.CAD;
 import com.gmail.lynx7478.majikku.Spell;
 import com.gmail.lynx7478.majikku.main.Majikku;
 import com.gmail.lynx7478.majikku.player.MajikkuPlayer;
+import com.gmail.lynx7478.majikku.spells.*;
 
 public class SpellManager implements Listener
 {
@@ -22,6 +23,9 @@ public class SpellManager implements Listener
 	{
 		spells = new ArrayList<Spell>();
 		pl.getServer().getPluginManager().registerEvents(this, pl);
+		
+		// Add the spells.
+		spells.add(new Ignite());
 	}
 	
 	public ArrayList<Spell> getSpells()

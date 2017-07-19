@@ -5,6 +5,7 @@ import java.util.logging.Level;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.gmail.lynx7478.majikku.commands.SpellsCommand;
 import com.gmail.lynx7478.majikku.managers.*;
 
 public class Majikku extends JavaPlugin 
@@ -32,6 +33,9 @@ public class Majikku extends JavaPlugin
 		
 		// Initilize the Spell manager.
 		spellManager = new SpellManager(this);
+		
+		// Commands.
+		this.getCommand("spells").setExecutor(new SpellsCommand());
 	}
 	
 	public void onDisable()

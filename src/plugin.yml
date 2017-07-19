@@ -1,0 +1,8 @@
+name: Majikku
+main: com.gmail.lynx7478.majikku.main.Majikku
+author: muresame
+version: 0.1-ALPHA
+description: Implements magic into Minecraft, based on the anime series 'Mahouka Koukou no Rettousei'.
+commands:
+  spells:
+    description: Lists all the active spells.
