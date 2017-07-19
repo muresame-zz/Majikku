@@ -34,6 +34,8 @@ public class Majikku extends JavaPlugin
 		// Initilize the Spell manager.
 		spellManager = new SpellManager(this);
 		
+		this.playerManager = new PlayerManager();
+		
 		// Commands.
 		this.getCommand("spells").setExecutor(new SpellsCommand());
 	}
