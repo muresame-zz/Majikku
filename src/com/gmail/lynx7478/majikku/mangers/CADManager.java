@@ -1,6 +1,8 @@
-package com.gmail.lynx7478.majikku;
+package com.gmail.lynx7478.majikku.mangers;
 
 import java.util.ArrayList;
+
+import com.gmail.lynx7478.majikku.CAD;
 
 public class CADManager 
 {

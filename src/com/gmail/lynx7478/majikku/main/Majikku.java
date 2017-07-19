@@ -5,7 +5,7 @@ import java.util.logging.Level;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.gmail.lynx7478.majikku.CADManager;
+import com.gmail.lynx7478.majikku.mangers.CADManager;
 import com.gmail.lynx7478.majikku.mangers.PlayerManager;
 import com.gmail.lynx7478.majikku.mangers.SpellManager;
 
