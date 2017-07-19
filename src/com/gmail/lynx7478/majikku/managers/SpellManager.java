@@ -1,4 +1,4 @@
-package com.gmail.lynx7478.majikku.mangers;
+package com.gmail.lynx7478.majikku.managers;
 
 import java.util.ArrayList;
 

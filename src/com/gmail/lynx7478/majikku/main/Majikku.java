@@ -5,7 +5,7 @@ import java.util.logging.Level;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.gmail.lynx7478.majikku.mangers.*;
+import com.gmail.lynx7478.majikku.managers.*;
 
 public class Majikku extends JavaPlugin 
 {
