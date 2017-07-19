@@ -1,39 +1,32 @@
 package com.gmail.lynx7478.majikku;
 
-import org.bukkit.entity.Player;
+import com.gmail.lynx7478.majikku.player.MajikkuPlayer;
 
-public class Spell 
+public abstract class Spell 
 {
 	
-	private double castTime;
+	private double cooldown;
+	private long castTime;
 	private String name;
 	private String codeName;
-//	private CAD[] cads;
 	
-	public Spell(String name, String codeName, double castTime)
+	public Spell(String name, String codeName, long castTime, double cooldown)
 	{
 		this.castTime = castTime;
 		this.name = name;
 		this.codeName = name;
+		this.cooldown = cooldown;
 	}
 	
-	/* public Spell(String name, String codeName, double castTime, CAD[] cads)
-	{
-		this.castTime = castTime;
-		this.name = name;
-		this.codeName = name;
-		this.cads = cads;
-	} */
+	public abstract void onCast(MajikkuPlayer p, CAD cad);
 	
-	public void onCast(Player p, CAD cad){}
+	public abstract void preCast(MajikkuPlayer p, CAD cad);
 	
-	public void preCast(){}
+	public abstract void duringCast(MajikkuPlayer p, CAD cad);
 	
-	public void duringCast() {}
+	public abstract void spell(MajikkuPlayer p, CAD cad);
 	
-	public void spell() {}
-	
-	public void onEnd() {}
+	public abstract void onEnd(MajikkuPlayer p, CAD cad);
 	
 	public String getName()
 	{
@@ -45,9 +38,14 @@ public class Spell
 		return codeName;
 	}
 	
-	public double getCastTime()
+	public long getCastTime()
 	{
 		return castTime;
+	}
+	
+	public double getCooldown()
+	{
+		return cooldown;
 	}
 
 }

@@ -1,5 +1,7 @@
 package com.gmail.lynx7478.majikku.player;
 
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
@@ -65,6 +67,22 @@ public class MajikkuPlayer
 	public CAD[] getCADs()
 	{
 		return cads;
+	}
+	
+	@SuppressWarnings("deprecation")
+	public boolean hasCADInHand()
+	{
+		if(bukkitPlayer.getPlayer().getItemInHand() != null && bukkitPlayer.getPlayer().getItemInHand().getType() != Material.AIR)
+		{
+			if(bukkitPlayer.getPlayer().getItemInHand().hasItemMeta())
+			{
+				if(bukkitPlayer.getPlayer().getItemInHand().getItemMeta().getLore().contains(ChatColor.AQUA + "CDA"))
+				{
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
 }

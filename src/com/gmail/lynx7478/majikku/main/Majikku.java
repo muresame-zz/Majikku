@@ -31,7 +31,7 @@ public class Majikku extends JavaPlugin
 		cadManager = new CADManager();
 		
 		// Initilize the Spell manager.
-		spellManager = new SpellManager();
+		spellManager = new SpellManager(this);
 	}
 	
 	public void onDisable()

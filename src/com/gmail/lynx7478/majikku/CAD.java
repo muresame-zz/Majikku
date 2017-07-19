@@ -16,8 +16,10 @@ public class CAD
 	private String codeName;
 	private ItemStack item;
 	
+	private Spell[] spells;
+	
 	public CAD(String name, String codeName, int levelRequired, int cadLevel, int baseLevel, double basePower, double powerPerLevel,
-			double maxPower, ItemStack item)
+			double maxPower, ItemStack item, Spell s1, Spell s2)
 	{
 		this.levelRequired = levelRequired;
 		this.cadLevel = cadLevel;
@@ -29,6 +31,9 @@ public class CAD
 		this.name = name;
 		this.codeName = codeName;
 		this.item = item;
+		
+		this.spells = new Spell[] {s1, s2};
+		
 	}
 	
 	public String getName()
@@ -74,6 +79,16 @@ public class CAD
 	public double getMaxPower()
 	{
 		return maxPower;
+	}
+	
+	public Spell[] getAssignedSpells()
+	{
+		return spells;
+	}
+	
+	public void setAssignedSpells(Spell s1, Spell s2)
+	{
+		spells =  new Spell[] {s1, s2};
 	}
 
 }

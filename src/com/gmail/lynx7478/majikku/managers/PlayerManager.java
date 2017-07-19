@@ -81,5 +81,10 @@ public class PlayerManager implements Listener
 		}
 		return true;
 	}
+	
+	public MajikkuPlayer getMajikkuPlayer(String s)
+	{
+		return this.players.get(s);
+	}
 
 }
