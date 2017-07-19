@@ -1,5 +1,7 @@
 package com.gmail.lynx7478.majikku;
 
+import org.bukkit.entity.Player;
+
 public class Spell 
 {
 	
@@ -23,7 +25,7 @@ public class Spell
 		this.cads = cads;
 	} */
 	
-	public void onCast(){}
+	public void onCast(Player p, CAD cad){}
 	
 	public void preCast(){}
 	
