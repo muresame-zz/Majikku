@@ -65,6 +65,7 @@ public class PlayerManager implements Listener
 		return true;
 	}
 	
+	@SuppressWarnings("deprecation")
 	private boolean loadPlayers()
 	{
 		for(File fs : dir.listFiles())
