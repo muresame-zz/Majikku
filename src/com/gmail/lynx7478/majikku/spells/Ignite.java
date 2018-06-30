@@ -13,31 +13,31 @@ public class Ignite extends Spell
 	}
 
 	@Override
-	public void onCast(MajikkuPlayer p, CAD cad) {
+	public void onCast(MajikkuPlayer p) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void preCast(MajikkuPlayer p, CAD cad) {
+	public void preCast(MajikkuPlayer p) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void duringCast(MajikkuPlayer p, CAD cad) {
+	public void duringCast(MajikkuPlayer p) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void spell(MajikkuPlayer p, CAD cad) {
+	public void spell(MajikkuPlayer p) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void onEnd(MajikkuPlayer p, CAD cad) {
+	public void onEnd(MajikkuPlayer p) {
 		// TODO Auto-generated method stub
 		
 	}

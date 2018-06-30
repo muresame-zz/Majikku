@@ -18,15 +18,15 @@ public abstract class Spell
 		this.cooldown = cooldown;
 	}
 	
-	public abstract void onCast(MajikkuPlayer p, CAD cad);
+	public abstract void onCast(MajikkuPlayer p);
 	
-	public abstract void preCast(MajikkuPlayer p, CAD cad);
+	public abstract void preCast(MajikkuPlayer p);
 	
-	public abstract void duringCast(MajikkuPlayer p, CAD cad);
+	public abstract void duringCast(MajikkuPlayer p);
 	
-	public abstract void spell(MajikkuPlayer p, CAD cad);
+	public abstract void spell(MajikkuPlayer p);
 	
-	public abstract void onEnd(MajikkuPlayer p, CAD cad);
+	public abstract void onEnd(MajikkuPlayer p);
 	
 	public String getName()
 	{
