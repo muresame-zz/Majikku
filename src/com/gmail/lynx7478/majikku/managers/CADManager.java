@@ -3,15 +3,19 @@ package com.gmail.lynx7478.majikku.managers;
 import java.util.ArrayList;
 
 import com.gmail.lynx7478.majikku.CAD;
+import com.gmail.lynx7478.majikku.Spell;
 import com.gmail.lynx7478.majikku.cads.SimpleCAD;
 import com.gmail.lynx7478.majikku.main.Majikku;
 import com.gmail.lynx7478.majikku.player.MajikkuPlayer;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class CADManager implements Listener
@@ -78,26 +82,40 @@ public class CADManager implements Listener
 					{
 						if(e.getAction() == Action.LEFT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_BLOCK)
 						{
-							e.setCancelled(true);
-							System.out.println("Cast things.");
-							c.getAssignedSpells()[0].preCast(p);
-							c.getAssignedSpells()[0].onCast(p);
-							c.getAssignedSpells()[0].onEnd(p);
-							System.out.println("Done??");
-						}else if(e.getAction() == Action.RIGHT_CLICK_AIR ||e.getAction() == Action.RIGHT_CLICK_BLOCK)
+						    e.setCancelled(true);
+						    activateCAD(p, c.getAssignedSpells()[0], c, e.getItem());
+						    return;
+						}
+
+						if(e.getAction() == Action.RIGHT_CLICK_AIR ||e.getAction() == Action.RIGHT_CLICK_BLOCK)
 						{
 							e.setCancelled(true);
-							System.out.println("Cast things.");
-							c.getAssignedSpells()[1].preCast(p);
-							c.getAssignedSpells()[1].onCast(p);
-							c.getAssignedSpells()[1].onEnd(p);
-							System.out.println("Done??");
+							activateCAD(p, c.getAssignedSpells()[1], c, e.getItem());
+							return;
 						}
 					}
 				}
 			}
 		}
 	}
+
+	private void activateCAD(MajikkuPlayer p, Spell s, CAD c, ItemStack e)
+    {
+        s.preCast(p);
+        ItemMeta m = e.getItemMeta();
+        m.setDisplayName(c.getItem().getItemMeta().getDisplayName() + ChatColor.AQUA + " -- Casting");
+        e.setItemMeta(m);
+        Bukkit.getServer().getScheduler().runTaskLater(Majikku.getInstance(), new Runnable()
+        {
+            public void run()
+            {
+                s.onCast(p);
+                m.setDisplayName(c.getItem().getItemMeta().getDisplayName());
+                e.setItemMeta(m);
+            }
+        }, s.getCastTime() * 20L);
+        s.onEnd(p);
+    }
 
 
 }
