@@ -6,3 +6,5 @@ description: Implements magic into Minecraft, based on the anime series 'Mahouka
 commands:
   spells:
     description: Lists all the active spells.
+  givecad:
+    description: Gives you a CAD.

@@ -3,6 +3,7 @@ package com.gmail.lynx7478.majikku.main;
 import java.io.IOException;
 import java.util.logging.Level;
 
+import com.gmail.lynx7478.majikku.commands.GiveCADCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.gmail.lynx7478.majikku.commands.SpellsCommand;
@@ -27,17 +28,18 @@ public class Majikku extends JavaPlugin
 	public void onEnable()
 	{
 		instance = this;
-		
-		// Initialize the CAD manager.
-		cadManager = new CADManager();
-		
+
 		// Initilize the Spell manager.
-		spellManager = new SpellManager(this);
+		spellManager = new SpellManager();
+
+		// Initialize the CAD manager.
+		cadManager = new CADManager(this);
 		
-		this.playerManager = new PlayerManager();
+		playerManager = new PlayerManager(this);
 		
 		// Commands.
 		this.getCommand("spells").setExecutor(new SpellsCommand());
+		this.getCommand("givecad").setExecutor(new GiveCADCommand());
 	}
 	
 	public void onDisable()

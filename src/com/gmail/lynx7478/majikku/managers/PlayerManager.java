@@ -19,8 +19,9 @@ public class PlayerManager implements Listener
 	private File dir;
 	private HashMap<String, MajikkuPlayer> players;
 	
-	public PlayerManager()
+	public PlayerManager(Majikku pl)
 	{
+		pl.getServer().getPluginManager().registerEvents(this, pl);
 		(dir = new File(Majikku.getInstance().getDataFolder().getAbsolutePath() + File.separator + "Players")).mkdirs();
 		
 		this.players = new HashMap<String, MajikkuPlayer>();
