@@ -12,7 +12,7 @@ public class Ignite extends Spell
 
 	public Ignite() 
 	{
-		super("Ignite", "ignite", 5, 1);
+		super("Ignite", "ignite", 5, 1.0, 1);
 	}
 
 	@Override

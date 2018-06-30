@@ -12,7 +12,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class SimpleCAD extends CAD {
     public SimpleCAD() {
-        super("SimpleCAD", "SCAD", 0, 0, 0, 1, 1, 99, new CADBuilder(Material.IRON_INGOT,
+        super("SimpleCAD", "SCAD", 0, 0, 0, 1, 1, 100, 100.0, new CADBuilder(Material.IRON_INGOT,
                 ChatColor.AQUA+"Simple CAD", false).resultingItem(), Majikku.getInstance().getSpellManager().getSpell(Ignite.class), Majikku.getInstance().getSpellManager().getSpell(Ignite.class));
     }
 }

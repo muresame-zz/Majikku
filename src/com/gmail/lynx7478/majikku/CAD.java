@@ -8,6 +8,7 @@ public class CAD
 	private int levelRequired;
 	private int cadLevel;
 	private int baseLevel;
+	private int maxLevel;
 	private double basePower;
 	private double powerPerLevel;
 	private double maxPower;
@@ -18,7 +19,7 @@ public class CAD
 	
 	private Spell[] spells;
 	
-	public CAD(String name, String codeName, int levelRequired, int cadLevel, int baseLevel, double basePower, double powerPerLevel,
+	public CAD(String name, String codeName, int levelRequired, int cadLevel, int baseLevel, int maxLevel, double basePower, double powerPerLevel,
 			double maxPower, ItemStack item, Spell s1, Spell s2)
 	{
 		this.levelRequired = levelRequired;
@@ -65,6 +66,8 @@ public class CAD
 	{
 		return baseLevel;
 	}
+
+	public int getMaxLevel() { return maxLevel; }
 	
 	public double getBasePower()
 	{

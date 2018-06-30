@@ -7,15 +7,17 @@ public abstract class Spell
 	
 	private double cooldown;
 	private long castTime;
+	private double power;
 	private String name;
 	private String codeName;
 	
-	public Spell(String name, String codeName, long castTime, double cooldown)
+	public Spell(String name, String codeName, long castTime, double power, double cooldown)
 	{
 		this.castTime = castTime;
 		this.name = name;
 		this.codeName = name;
 		this.cooldown = cooldown;
+		this.power = power;
 	}
 	
 	public abstract void onCast(MajikkuPlayer p);
@@ -47,5 +49,7 @@ public abstract class Spell
 	{
 		return cooldown;
 	}
+
+	public double getPower() { return power; }
 
 }

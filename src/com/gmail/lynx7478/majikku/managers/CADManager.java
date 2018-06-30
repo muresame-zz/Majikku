@@ -60,6 +60,7 @@ public class CADManager implements Listener
 		return null;
 	}
 
+	//TODO: Level.
 	@EventHandler
 	public void onInteract(PlayerInteractEvent e)
 	{
@@ -115,6 +116,15 @@ public class CADManager implements Listener
             }
         }, s.getCastTime() * 20L);
         s.onEnd(p);
+    }
+
+    //TODO: Finish this.
+    private void level(CAD c)
+    {
+        if(c.getCADLevel() != c.getMaxLevel())
+        {
+
+        }
     }
 
 
