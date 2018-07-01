@@ -23,7 +23,12 @@ public class GiveCADCommand implements CommandExecutor {
         Player p = (Player) sender;
         if(givecad.getName().equalsIgnoreCase("givecad"))
         {
-            if(args[0] == null)
+            if(!p.hasPermission("majikku.givecad"))
+            {
+                p.sendMessage(ChatColor.RED + "Sorry, you do not have permission to execute this command.");
+                return false;
+            }
+            if(args == null)
             {
                 p.sendMessage(ChatColor.RED + "You must input the CAD you want to be given.");
                 return false;

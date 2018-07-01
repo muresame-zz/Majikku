@@ -16,6 +16,7 @@ public class MajikkuPlayer
 	private double power;
 	private double basePower;
 	private CAD[] cads;
+	private boolean cooling;
 	
 	public MajikkuPlayer(Player p)
 	{
@@ -76,7 +77,7 @@ public class MajikkuPlayer
 		{
 			if(bukkitPlayer.getPlayer().getItemInHand().hasItemMeta())
 			{
-				if(bukkitPlayer.getPlayer().getItemInHand().getItemMeta().getLore().contains(ChatColor.AQUA + "CDA"))
+				if(bukkitPlayer.getPlayer().getItemInHand().getItemMeta().getLore().contains(ChatColor.AQUA + "CAD"))
 				{
 					return true;
 				}
