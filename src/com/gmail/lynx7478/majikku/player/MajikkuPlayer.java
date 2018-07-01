@@ -38,6 +38,13 @@ public class MajikkuPlayer
 		this.power = power;
 		this.cads = cads;
 		this.basePower = basePower;
+
+		// The player isn't on cooldown at start.
+		//TODO: Cooldown varies on the level of the player.
+		/* Cooldown diminishes or becomes larger varying on the player, will get the values later.
+		i.e: Level 1 makes the cooldown larger by 50%, multiply cooldown times 1.5.
+		 */
+		cooling = false;
 	}
 	
 	public OfflinePlayer getPlayer()
@@ -68,6 +75,16 @@ public class MajikkuPlayer
 	public CAD[] getCADs()
 	{
 		return cads;
+	}
+
+	public boolean isCooling()
+	{
+		return cooling;
+	}
+
+	public void setCooling(boolean cooling)
+	{
+		this.cooling = cooling;
 	}
 	
 	@SuppressWarnings("deprecation")

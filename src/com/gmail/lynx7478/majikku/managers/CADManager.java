@@ -103,6 +103,10 @@ public class CADManager implements Listener
 
 	private void activateCAD(MajikkuPlayer p, Spell s, CAD c, ItemStack e)
     {
+        if(p.isCooling())
+        {
+            return;
+        }
         s.preCast(p);
         ItemMeta m = e.getItemMeta();
         m.setDisplayName(c.getItem().getItemMeta().getDisplayName() + ChatColor.AQUA + " -- Casting");
@@ -117,6 +121,26 @@ public class CADManager implements Listener
             }
         }, s.getCastTime() * 20L);
         s.onEnd(p);
+        p.setCooling(true);
+        m.setDisplayName(c.getItem().getItemMeta().getDisplayName() + ChatColor.RED + " -- On cooldown");
+        e.setItemMeta(m);
+        Bukkit.getServer().getScheduler().runTaskLater(Majikku.getInstance(), new Runnable()
+        {
+            public void run()
+            {
+                p.setCooling(false);
+                m.setDisplayName(c.getItem().getItemMeta().getDisplayName());
+                e.setItemMeta(m);
+            }
+        }, (long) (s.getCooldown()*20L));
+    }
+
+    private long calculateCooldownRatio(MajikkuPlayer p)
+    {
+        /* if p is level 1
+        return x value... etc.
+         */
+        return 0;
     }
 
     // Soulbound.
