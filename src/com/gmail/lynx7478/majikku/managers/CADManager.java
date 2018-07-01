@@ -13,6 +13,7 @@ import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -117,6 +118,28 @@ public class CADManager implements Listener
         }, s.getCastTime() * 20L);
         s.onEnd(p);
     }
+
+    // Soulbound.
+	@EventHandler
+	public void onPlayerDrop(PlayerDropItemEvent e)
+	{
+		MajikkuPlayer mP = Majikku.getInstance().getPlayerManager().getMajikkuPlayer(e.getPlayer().getName());
+		if(e.getItemDrop() == null)
+		{
+			return;
+		}
+		ItemStack i = (ItemStack) e.getItemDrop();
+		if(!i.hasItemMeta())
+		{
+			return;
+		}
+		if(!i.getItemMeta().getLore().contains(ChatColor.GOLD+"Soulbound"))
+		{
+			return;
+		}
+		e.setCancelled(true);
+
+	}
 
     //TODO: Finish this.
     private void level(CAD c)

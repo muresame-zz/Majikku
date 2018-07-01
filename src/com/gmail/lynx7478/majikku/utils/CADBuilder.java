@@ -21,7 +21,7 @@ public class CADBuilder
         this.name = name;
         this.droppable = droppable;
     }
-    
+
     public ItemStack resultingItem()
     {
         ItemStack i = new ItemStack(mat);
